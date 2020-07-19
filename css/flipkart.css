@@ -107,7 +107,7 @@ body {
 }
 
 .rightHeader nav>ul>li>a {
-    padding: 0 15px 0 33px;
+    padding: 26px 15px 18px 33px;
     text-decoration: none;
     color: #fff;
     font-weight: bold;
@@ -136,11 +136,10 @@ body {
     display: none;
     flex-direction: column;
     list-style: none;
-    background: #fff;
     width: 260px;
-    box-shadow: 1px 0px 6px 0px #ccc;
-    margin: 20px 0;
-    left: -66px;
+    margin: 7px 0;
+    left: -76px;
+    z-index: 1;
 }
 
 .dropdown .nav-item .nav-link {
@@ -151,14 +150,18 @@ body {
 .dropdown a {
     text-decoration: none;
     color: #444;
-    border-bottom: 1px solid #eee;
     display: block;
     width: 100%;
-    padding: 15px 15px;
+    padding: 15px 0;
+    transition: all .5s ease;
 }
 
 .customer_links {
     display: flex;
+}
+
+.customer_links span {
+    flex: 1;
 }
 
 .customer_links span a.customer {
@@ -168,14 +171,168 @@ body {
 
 .customer_links span a.signup {
     color: #2874f0;
+    text-align: right;
 
 }
 
 ul>li:hover ul {
     display: flex;
+}
 
+.dropdown li {
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+}
+
+.triangle {
+    width: 0;
+    height: 0;
+    border-right: 11px solid transparent;
+    border-left: 11px solid transparent;
+    border-bottom: 11px solid #fff;
+    position: relative;
+    margin: auto;
+}
+
+.dropdownMenu {
+    display: flex;
+    align-items: center;
+}
+
+.dropdownMenu span {
+    margin: 0px 15px;
+}
+
+.dropdownMenu span i {
+    color: #2874f0;
+}
+
+span.plus_icon img {
+    width: 14px;
+    filter: invert(1);
+}
+
+.customer_links span a {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/*-------right menu css ends here ----*/
+
+/*------main menu block css starts here -----*/
+#mainMenuBlock {
+    background-color: #fff;
+    height: 40px;
+    width: 100%;
+    box-shadow: 1px 1px 1px 1px #ccc;
+}
+
+#mainMenuBlock article {
+    width: 1200px;
+    margin: 0 auto;
 
 }
 
+#mainMenuBlock ul {
+    display: flex;
+    height: 40px;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
 
-/*-------right menu css ends here ----*/
+#mainMenuBlock ul li {
+    flex: 1 auto;
+}
+
+#mainMenuBlock ul li a {
+    text-decoration: none;
+    color: #212121;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 12px 0;
+}
+
+#mainMenuBlock ul li a:hover {
+    color: #2874f0;
+}
+
+#mainMenuBlock ul li a svg {
+    margin-left: 6px;
+    -webkit-transform: rotate(270deg);
+    transform: rotate(270deg);
+}
+
+#mainMenuBlock ul li a svg path {
+    fill: #878787 !important;
+    opacity: 0.5;
+}
+
+
+/*----dropdown mega menu starts here ----*/
+#MegaDropDownMenuBlock {
+    background: #fff;
+    height: 75%;
+    width: 1220px;
+    box-shadow: 0px 2px 3px 0px #ccc;
+    margin: 10px 0px;
+    position: absolute;
+    left: 135px;
+    display: none;
+    z-index: 9999;
+}
+
+#MegaDropDownMenuBlock div {
+    flex-basis: 25%;
+    padding: 20px;
+}
+
+#MegaDropDownMenuBlock div:nth-child(odd) {
+    background: #fff;
+}
+
+#MegaDropDownMenuBlock div:nth-child(even) {
+    background: #f3f4f5;
+}
+
+.megaMenuDiv ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start !important;
+    line-height: 26px;
+}
+
+.megaMenuDiv ul li a {
+    font-size: 13px !important;
+    color: #212121 !important;
+    font-weight: 400 !important;
+}
+
+._1h5QLb a {
+    font-weight: bold !important;
+}
+
+#mainMenuBlock ul>li:hover #MegaDropDownMenuBlock {
+    display: flex;
+}
+
+#mainMenuBlock ul li:hover ._3ynUUz {
+    transform: rotate(90deg) !important;
+    -webkit-transform: rotate(90deg);
+
+}
+
+#mainMenuBlock ul li:hover ._3ynUUz path {
+    fill: #2874f0 !important;
+}
+
+/*----dropdown mega menu ends here ------*/
+
+#barsBlock {
+    display: none;
+}
+
+/*-----main menu block css ends here -----*/
